@@ -12,6 +12,6 @@ class EstudianteController extends Controller
 
         $programas = Programa::all();
 
-        return view('', compact($programas));
+        return view('formulario', compact('programas'));
     }
 }
