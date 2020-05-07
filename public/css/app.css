@@ -1,0 +1,168 @@
+#cabezal{
+    background-color: aliceblue;
+    width: 100%;
+    height: 150px;
+}
+#imagen{
+    width: 50%;
+    height: 150px;
+}
+#menu{
+    width: 100%;
+    height: 50px;
+    background-color: coral;
+
+}
+#menu ul {
+    list-style-type: none;
+}
+#menu li{
+    float: right;
+
+}
+#menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+
+.formulario-registro input[type="email"],[type="text"],select{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+
+.formulario-login input[type="email"],[type="password"],select{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    width: 100%;
+  }
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.contenedor {
+    border-radius: 5px;
+    background-color:#fffbf4;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+  }
+.formulario {
+    width: 50%;
+    height: auto;
+    align-content: center;
+}
+.alertas{
+    background-color:#eaabab;
+    border-radius: 5px;
+}
+.alertas ul{
+    color:#af3c3c;
+    font-size: 30px;
+    font-style: normal;
+    padding: 0 auto;
+    margin: 0 auto;
+    font-family: fantasy;
+}
+.mensaje{
+    background-color:limegreen;
+    color: #010d01;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+}
+h2{
+    padding: 60px;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+}
+.informacion{
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align: justify;
+
+}
+.informacion-admin{
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align: justify;
+}
+table, td, th {
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    padding: 15px;
+  }
+  .filtros{
+      width: 100%;
+      height: auto;
+      float: left;
+      justify-items: center;
+
+  }
+  .buscador-filtro{
+
+      width: 50%;
+      margin: 0;
+      padding: 0;
+      float: left;
+  }
+  .ordenar-filtro{
+
+    padding-top: 10px;
+    width: 40%;
+    float: left;
+
+  }
+  .filtros input,select{
+    width: 20%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+  }
+  .filtros input[type="button"]{
+    background-color: #4CAF50;
+    color: white;
+    width: 20%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+  }

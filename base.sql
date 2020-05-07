@@ -14,13 +14,15 @@ CREATE TABLE IF NOT EXISTS usuarios(
     nombre  VARCHAR(25) NOT NULL,
     apellido VARCHAR(25),
     email VARCHAR(25) NOT NULL,
-    contrasena VARCHAR(100) NOT NULL,
+    password VARCHAR(100) NOT NULL,
     id_rol INT(11) NOT NULL,
     created_at DATETIME,
     updated_at DATETIME,
     CONSTRAINT pk_usuario PRIMARY KEY(id),
     CONSTRAINT fk_usario_rol FOREIGN KEY(id_rol) REFERENCES rol(id)
 )ENGINE=InnoDb;
+
+INSERT INTO usuario(nombre, apellido, email, password, id_rol) VALUES('admin', 'admin', 'admin@gmail.com', '$2y$10$/y9B0HKAEK/qr06qFzxO9OfETj.eMxPXf3hUf.1V2CQWm1KzfFA3a', 1);
 
 CREATE TABLE IF NOT EXISTS programas(
     id INT(11) AUTO_INCREMENT NOT NULL,

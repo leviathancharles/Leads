@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,5 +19,14 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/', 'EstudianteController@formularioRegistro')->name('home');
-Route::post('/registrarEstudiante', 'EstudianteController@registrarEstudiante');
+Auth::routes();
+Route::get('/', 'EstudianteController@formularioRegistro')->name('inicio');
+Route::post('/registrar-estudiante', 'EstudianteController@registrarEstudiante');
+
+Route::get('/listado-estudiantes', 'ContactoController@listadoGeneral');
+Route::get('/cambiar-contacto', 'ContactoController@actualizarContacto');
+
+
+
+
+Route::get('/home', 'HomeController@index')->name('home');
