@@ -1,6 +1,10 @@
-<form action="/registrarEstudiante">
+<form action="/registrarEstudiante" method="POST">
     @csrf
-
+    @if ($errors->any())
+        @foreach ($errors->all() as $error )
+            {{ $error }}
+        @endforeach
+    @endif
     <label for="nombre">Nombre</label>
     <input type="text" name="nombre" id="nombre">
     <label for="apellido">Apellido</label>
