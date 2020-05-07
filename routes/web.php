@@ -18,5 +18,5 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/', 'EstudianteController@formularioRegistro');
+Route::get('/', 'EstudianteController@formularioRegistro')->name('home');
 Route::post('/registrarEstudiante', 'EstudianteController@registrarEstudiante');

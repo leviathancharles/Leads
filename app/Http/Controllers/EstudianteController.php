@@ -22,16 +22,13 @@ class EstudianteController extends Controller
         [
             'nombre' => 'required',
             'apellido' => 'required',
-            'email'    => 'required|unique:estudiante|email',
-            'telefono' => 'required',
+            'email'    => 'required|unique:estudiantes|email',
+            'telefono' => 'required|int',
             'programa' => 'required|int'
             ]);
         if($validador->fails()){
-
-            $respuesta = [
-                'estado' => 'error',
-                'errores' => $validador->errors()
-            ];
+            return redirect('/')
+            ->withErrors($validador);
 
         }else{
             $nombre = $request->input('nombre');
@@ -47,15 +44,7 @@ class EstudianteController extends Controller
             $estudiante->telefono_contacto = $telefono;
             $estudiante->id_programa = $programa;
             $estudiante->save();
-
-            $respuesta = [
-                'estado' => 'success',
-                'mensaje' => 'Se ha guardado correctamente el registro'
-            ];
         }
-
-        return view('formulario',compact('respuesta'));
-
 
 
     }
